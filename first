@@ -1,0 +1,28 @@
+ <td>
+          <form action="{{route('medicine_stocks.destroy',$medicine_stock->Med_No)}}" method="POST">
+            <a class="btn btn-info" href="{{route('medicine_stocks.show',$medicine_stock->Med_No)}}">Show</a>
+
+            <a class="btn btn-primary" href="{{route('medicine_stocks.edit',$medicine_stock->Med_No)}}">Edit</a>
+
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Delete</button>
+            
+         </form>
+         </td>
+		 
+		    <td>
+        
+         <form action="{{ route('medicine_stocks.destroy',$medicine_stock->Med_No) }}" method="POST">
+   
+   <a class="btn btn-info" href="{{ route('medicine_stocks.show',$product->Med_No) }}">Show</a>
+
+   <a class="btn btn-primary" href="{{ route('medicine_stocks.edit',$product->Med_No) }}">Edit</a>
+
+   @csrf
+   @method('DELETE')
+
+   <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+         </td>
